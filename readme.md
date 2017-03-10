@@ -1,6 +1,12 @@
 # aws-ecr-semver
 If you are using AWS ECR to store your docker images and those images have labels in the [semver](http://semver.org/) format then you can use this tool to query AWS (assuming you are already authenticated) retrieve the list of valid semver labels and the one that satisfies a semver pattern.
 
+Consider installing this globally for ease of use.
+
+`
+npm install -g aws-ecr-semver
+`
+
 ## Usage
 
 ```
@@ -23,12 +29,10 @@ If you are using AWS ECR to store your docker images and those images have label
 The command outputs to stdout json formated data for the semver valid labels and the maximum label satisfying the semver pattern provided.
 
 ## Example
+This example fails to match on the provided semver pattern and shows the single existing valid semver label present in the 'my-repo' registry.
 
 ```bash
-npm start -- -r="my-repo" -s=^2.*
-> aws-ecr-semver@1.0.0 start /var/devProjects/aws-ecr-semver
-> node ./src/index.js "-r=bongo-db-server" "-s=^2.*"
-
+aws-ecr-semver -r="my-repo" -s=^2.*
 {"maxSatisfyingLabel":"","validLabels":["1.2.3"]}
 ```
 

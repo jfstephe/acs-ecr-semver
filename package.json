@@ -1,6 +1,6 @@
 {
   "name": "aws-ecr-semver",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Query an AWS ECR registry labels with a semver pattern and return the best match.",
   "main": "./src/index.js",
   "scripts": {
@@ -17,6 +17,9 @@
     "docker",
     "semver"
   ],
+  "bin": {
+    "aws-ecr-semver": "./src/index.js"
+  },
   "author": "John Stephenson",
   "license": "MIT",
   "bugs": {
