@@ -1,0 +1,33 @@
+{
+  "name": "aws-ecr-semver",
+  "version": "1.0.0",
+  "description": "Query an AWS ECR registry labels with a semver pattern and return the best match.",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jfstephe/aws-ecr-semver.git"
+  },
+  "keywords": [
+    "aws",
+    "ecr",
+    "docker",
+    "semver"
+  ],
+  "author": "John Stephenson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jfstephe/aws-ecr-semver/issues"
+  },
+  "homepage": "https://github.com/jfstephe/aws-ecr-semver#readme",
+  "dependencies": {
+    "args": "^2.3.0",
+    "semver": "^5.3.0"
+  },
+  "devDependencies": {
+    "jasmine": "^2.5.3"
+  }
+}
