@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 'use strict';
 const AwsLabelLister = require('./AwsLabelLister');
 const LabelParser = require('./LabelParser');
