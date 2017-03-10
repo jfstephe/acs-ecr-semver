@@ -6,7 +6,7 @@ let totalOutput = '';
 module.exports = function() {
   this.getLabels = function(registryName) {
     let promise = new Promise((resolve, reject) => {
-      const ls = spawn( './src/listRepoTags.sh', [ registryName ] );
+      const ls = spawn( './listRepoTags.sh', [ registryName ], { 'cwd': __dirname});
       ls.stdout.on( 'data', data => {
         totalOutput += data;
       });
